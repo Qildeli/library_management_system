@@ -2,7 +2,7 @@ from library.transaction import Transaction
 
 
 class Library:
-    """Library to add, remove and search books and borrowers.
+    """Library to add, remove and search books and borrowers.json.
         Record returned books and check overdue books"""
     def __init__(self):
         self.books = {}
@@ -29,7 +29,7 @@ class Library:
         self.transactions[transaction.transaction_id] = transaction
 
     def returned_book(self, transaction_id):
-        transaction = self.transactions[transaction_id]  # Get the transaction from transactions dictionary
+        transaction = self.transactions[transaction_id]  # Get the transaction from transactions.json dictionary
         if transaction not in self.transactions:
             raise ValueError(f'{transaction} is not found')
         transaction.mark_as_returned()  # Mark transaction as returned
@@ -42,5 +42,5 @@ class Library:
         pass
 
     def search_borrowers(self, keyword):
-        # Search for borrowers by name or contact information.
+        # Search for borrowers.json by name or contact information.
         pass

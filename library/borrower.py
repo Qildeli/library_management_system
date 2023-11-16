@@ -2,7 +2,7 @@ import uuid
 
 
 class Borrower:
-    """Register new borrowers with their details like name, contact"""
+    """Register new borrowers.json with their details like name, contact"""
     def __init__(self, name, contact):
         self.borrower_id = uuid.uuid4()
         self.name = name
