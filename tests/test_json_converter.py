@@ -1,10 +1,10 @@
 import unittest
-import json
-from pathlib import Path
+from library.library import Library
 
 
-class TestJsonConverter(unittest.TestCase):
+class TestLibrary(unittest.TestCase):
+
     pass
 
-
-
+if __name__ == '__main__':
+    unittest.main()

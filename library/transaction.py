@@ -16,3 +16,13 @@ class Transaction:
     def mark_as_returned(self):
         self.return_date = date.today()
         self.status = 'returned'
+
+    def to_dict(self):
+        return {
+            'id': self.transaction_id,
+            'book_id': self.book_id,
+            'borrower_id': self.borrower_id,
+            'due_date': self.due_date,
+            'return_date': self.return_date,
+            'status': self.status
+        }

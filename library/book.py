@@ -15,3 +15,12 @@ class Book:
         if author: self.author = author
         if isbn: self.isbn = isbn
         if genre: self.genre = genre
+
+    def to_dict(self):
+        return {
+            'id': self.book_id,
+            'title': self.title,
+            'author': self.author,
+            'isbn': self.isbn,
+            'genre': self.genre
+        }

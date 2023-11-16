@@ -11,3 +11,10 @@ class Borrower:
     def update_borrower_details(self, name=None, contact=None):
         if name: self.name = name
         if contact: self.contact = contact
+
+    def to_dict(self):
+        return {
+            'id': self.borrower_id,
+            'name': self.name,
+            'contact': self.contact
+        }
