@@ -1,15 +1,3 @@
-# Books
-# - Remove books from the library.
-# - Search for books by title, author, genre, or ISBN.
-
-# Borrowers
-# - Remove borrowers from the system.
-# - Search for borrowers by name or contact information.
-
-# Transaction
-# - Record the return of books.
-# - Check for overdue books.
-
 from library.transaction import Transaction
 
 
@@ -46,11 +34,13 @@ class Library:
             raise ValueError(f'{transaction} is not found')
         transaction.mark_as_returned()  # Mark transaction as returned
 
-    def search_books(self, keyword):
-        pass
-
     def check_overdue_books(self):
         pass
 
+    def search_books(self, keyword):
+        # Search for books by title, author, genre, or ISBN.
+        pass
+
     def search_borrowers(self, keyword):
+        # Search for borrowers by name or contact information.
         pass
