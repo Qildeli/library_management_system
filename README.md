@@ -1,4 +1,4 @@
-# library_management_system
+# Library Management System
 
 Description:
 Develop a library management system that allows users to manage books, borrowers, and transactions. The system should provide functionalities such as adding books, registering borrowers, borrowing and returning books, and generating reports.
