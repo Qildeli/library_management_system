@@ -1,10 +1,11 @@
 import unittest
-from library.library import Library
+from library.json_converter import save_to_file, load_from_file
 
 
-class TestLibrary(unittest.TestCase):
+class TestJsonConverter(unittest.TestCase):
+    def setUp(self):
+        pass
 
-    pass
 
 if __name__ == '__main__':
     unittest.main()
