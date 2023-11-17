@@ -1,9 +1,6 @@
-from .json_converter import save_to_file, load_from_file
-from .book import Book
-from .borrower import Borrower
-from .transaction import Transaction
-import uuid
 from datetime import date
+from .json_converter import save_to_file, load_from_file
+from .transaction import Transaction
 
 
 class Library:
@@ -54,12 +51,18 @@ class Library:
         transaction = Transaction(transaction_data['borrower_id'], transaction_data['book_id'])
         # Use the Transaction method to mark it as returned
         transaction.mark_as_returned()
-        # Update the transactions dictionary with the new state of the transaction
+        # Update transactions dictionary with the new state of the transaction
         self.transactions[transaction_id] = transaction.to_dict()
         save_to_file(self.transactions, 'data/transactions.json')
 
     def check_overdue_books(self):
-        pass
+        overdue_transactions = {}  # Hold transactions that are overdue
+
+        for transaction_id, transaction in self.transactions.items():
+            if transaction.return_date is None and transaction.due_date < date.today():
+                overdue_transactions[transaction_id] = transaction
+
+        return overdue_transactions
 
     def search_books(self, keyword):
         # Search for books by title, author, genre, or ISBN.

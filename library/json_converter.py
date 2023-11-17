@@ -1,5 +1,4 @@
 import json
-from pathlib import Path
 
 
 def save_to_file(data, filename):
@@ -13,4 +12,3 @@ def load_from_file(filename):
             return json.load(file)
     except FileNotFoundError:
         return {}
-
