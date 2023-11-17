@@ -22,6 +22,7 @@ class Transaction:
             'id': self.transaction_id,
             'book_id': self.book_id,
             'borrower_id': self.borrower_id,
+            'checkout_date': self.checkout_date,
             'due_date': self.due_date,
             'return_date': self.return_date,
             'status': self.status
