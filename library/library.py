@@ -71,3 +71,10 @@ class Library:
     def search_borrowers(self, keyword):
         # Search for borrowers.json by name or contact information.
         pass
+
+    def generate_report(self):
+        """
+        Generate reports on book inventory, borrowed books, overdue books, etc.
+        Display statistics such as the number of available books, total borrowers, etc.
+        """
+        pass

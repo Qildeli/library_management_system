@@ -1,16 +1,12 @@
 import unittest
+from unittest.mock import patch, MagicMock
 from library.library import Library
-
-"""
-Test adding a book with valid details and ensure it is saved to the books dictionary and the JSON file.
-Test adding a book with an ID that already exists and ensure it handles duplicates appropriately.
-"""
+from library.book import Book
 
 
 class TestAddBook(unittest.TestCase):
 
     pass
-
 
 if __name__ == '__main__':
     unittest.main()
